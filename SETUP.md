@@ -21,3 +21,25 @@ $ bundle exec rails g solidus:auth:install
 $ bundle exec rake railties:install:migrations
 $ bundle exec rake spree_sample:load
 ```
+
+# Install and setup Apartment
+
+Add Apartment gem to the project dependencies
+
+```ruby
+# Gemfile
+
+gem 'apartment', '~> 2.2.0'
+```
+
+and then launch the command
+
+```sh
+bundle exec rails generate apartment:install
+```
+
+This will create the Apartment init file at `config/initializers/apartment.rb`.
+Among the whole well-documented settings, you can tell apartment which
+_Elevator_ to use (i.e. the criteria for tenant switching). There are a bunch of
+built-in elevators in `Apartmen::Elevators` module: Generic, Domain, Subdomain,
+FirstSubdomain, Host, HostHash, but you can also define your own custom elevator.
