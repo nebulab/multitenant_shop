@@ -11,5 +11,6 @@ find more details about the encountered issues and some advice on how to make
 Solidus and Apartment work.
 
 ### [Solidus and Apartment setup](SETUP.md)
+### [Testing with RSpec](spec)
 
 [postgresql]: https://www.postgresql.org/

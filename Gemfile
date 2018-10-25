@@ -45,6 +45,9 @@ gem 'apartment', '~> 2.2.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dev_tools', github: 'nebulab/dev_tools'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'rspec-rails', '~> 3.6.0'
 end
 
 group :development do
@@ -59,6 +62,7 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+  gem 'database_cleaner', '~> 1.5.3'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
