@@ -11,6 +11,7 @@ find more details about the encountered issues and some advice on how to make
 Solidus and Apartment work.
 
 ### [Solidus and Apartment setup](SETUP.md)
+### [About migrations](db)
 ### [Testing with RSpec](spec)
 ### [Seeding](db/seeds)
 
