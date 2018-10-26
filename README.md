@@ -12,5 +12,6 @@ Solidus and Apartment work.
 
 ### [Solidus and Apartment setup](SETUP.md)
 ### [Testing with RSpec](spec)
+### [Seeding](db/seeds)
 
 [postgresql]: https://www.postgresql.org/

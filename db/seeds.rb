@@ -8,3 +8,14 @@
 
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+
+MultitenantShop::Stores.each do |tenant, domain|
+  Apartment::Tenant.switch(tenant) do
+    Rails.root.join("db/seeds/#{tenant}").each_child do |seed_file|
+      puts "Loading seed file: #{seed_file}"
+      load seed_file
+    end
+  rescue Errno::ENOENT => e
+    puts "there was an error while accessing #{e.message}"
+  end
+end
