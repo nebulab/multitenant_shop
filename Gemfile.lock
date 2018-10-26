@@ -71,6 +71,9 @@ GEM
       parallel (>= 0.7.1)
       public_suffix (>= 2)
       rack (>= 1.3.6)
+    apartment-sidekiq (1.2.0)
+      apartment (>= 1.0)
+      sidekiq (>= 2.11)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -114,6 +117,7 @@ GEM
     coffee-script-source (1.12.2)
     colorize (0.8.1)
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.2)
     crass (1.0.4)
     database_cleaner (1.5.3)
     devise (4.5.0)
@@ -251,6 +255,8 @@ GEM
     public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.5)
+    rack-protection (2.0.4)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.1)
@@ -287,6 +293,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    redis (4.0.2)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
@@ -334,6 +341,10 @@ GEM
     selenium-webdriver (3.14.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
+    sidekiq (5.2.2)
+      connection_pool (~> 2.2, >= 2.2.2)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
     solidus (2.7.0)
       solidus_api (= 2.7.0)
       solidus_backend (= 2.7.0)
@@ -452,6 +463,7 @@ PLATFORMS
 
 DEPENDENCIES
   apartment (~> 2.2.0)
+  apartment-sidekiq (~> 1.2.0)
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
@@ -467,6 +479,7 @@ DEPENDENCIES
   rspec-rails (~> 3.6.0)
   sass-rails (~> 5.0)
   selenium-webdriver
+  sidekiq
   solidus (~> 2.6)
   solidus_auth_devise (~> 2.1.0)
   spring
